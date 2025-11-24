@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Christmas Mini Sessions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Calendly widget (correct) -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+</head>
+
+<body class="bg-red-50 text-gray-800">
+  <header class="bg-red-600 text-white py-6 shadow-lg">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <h1 class="text-4xl font-bold">Christmas Photo Mini Sessions</h1>
+      <p class="text-lg mt-2">Capture magical moments with your loved ones this December</p>
+    </div>
+  </header>
+
+  <section class="max-w-5xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-3xl font-semibold mb-4">Holiday Photoshoot Packages</h2>
+      <p class="mb-4 text-lg">Perfect for families, friends, couples, and kids! Limited slots available throughout December.</p>
+      <ul class="list-disc ml-5 space-y-2 text-md">
+        <li>30-60 minutes Christmas-themed photoshoot</li>
+        <li>5 professionally edited digital photos</li>
+        <li>Online private gallery</li>
+        <li>Optional printed cards</li>
+      </ul>
+      <p class="mt-6 text-xl font-semibold">Price: €100</p>
+      <a href="#" id="book-btn" class="mt-6 inline-block bg-green-600 text-white px-6 py-3 text-lg rounded-lg shadow hover:bg-green-700 transition">Book a Session</a>
+    </div>
+    <div>
+      <img src="images/image.jpg" alt="Christmas Photoshoot" class="rounded-2xl shadow-lg" />
+    </div>
+  </section>
+
+  <!-- Gallery: three images inserted before the Reserve Your Spot section -->
+  <section class="max-w-5xl mx-auto px-4 py-8">
+    <h2 class="text-2xl font-semibold mb-4 text-center"></h2>
+    <div class="grid sm:grid-cols-3 gap-4">
+
+      <figure class="overflow-hidden rounded-xl shadow-lg">
+        <img src="images/image6.JPG" alt="Children with holiday props" class="w-full h-56 object-cover">
+      </figure>
+
+      <figure class="overflow-hidden rounded-xl shadow-lg">
+        <img src="images/image4.PNG" alt="Children with holiday props" class="w-full h-56 object-cover">
+      </figure>
+
+      <figure class="overflow-hidden rounded-xl shadow-lg">
+        <img src="images/image7.PNG" alt="Couple in festive hats" class="w-full h-56 object-cover">
+      </figure>
+    </div>
+  </section>
+
+  <section id="booking" class="bg-white py-12 shadow-inner">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl font-semibold mb-6">Reserve Your Spot</h2>
+      <p class="mb-8">Use the scheduler below to book your Christmas mini session.</p>
+
+      <!-- Calendly inline widget: replace CALENDLY_URL with your event URL -->
+      <div class="calendly-wrapper rounded-xl overflow-hidden shadow" style="min-height:700px;">
+        <div class="calendly-inline-widget" data-url="https://calendly.com/eomole55/30min" style="min-width:320px;height:700px;"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="text-center py-6 text-gray-600 text-sm mt-12">
+    © 2025 Plena Studios. All rights reserved.
+  </footer>
+
+  <!-- Calendly script (paste before closing </body>) -->
+  <script src="https://calendly.com/eomole55/30min.js" type="text/javascript" async></script>
+  <script>
+    // Popup hookup for the "Book a Session" button. Replace CALENDLY_URL below as well.
+    document.getElementById('book-btn').addEventListener('click', function (e) {
+      e.preventDefault();
+      if (window.Calendly && Calendly.initPopupWidget) {
+        Calendly.initPopupWidget({ url: 'https://calendly.com/eomole55/30min' });
+      } else {
+        // fallback: open calendly page in new tab
+        window.open('https://calendly.com/eomole55/30min', '_blank', 'noopener');
+      }
+      return false;
+    });
+  </script>
+</body>
+</html>
